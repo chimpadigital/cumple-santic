@@ -62,7 +62,7 @@ export default function Home() {
           </li>
         </ul>
       </div>
-      <Image src={"/images/fondo.png"} fill alt="bg" className="w-full object-cover fixed top-0 bg-fixed"></Image>
+      <Image src={"/images/fondo.png"} fill alt="bg" className="w-full object-cover !fixed top-0"></Image>
 
       <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
         <ModalContent>
