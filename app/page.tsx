@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure } from "@nextui-org/react";
 import { useRef } from "react";
+import Insta from "@/components/insta";
 
 export default function Home() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -82,8 +83,66 @@ export default function Home() {
           {() => (
             <>
               <ModalBody>
-                <div className="pt-6">
-                  <Image src={"/images/coloresimagen.png"} width={400} height={500} alt="bg" className="w-full max-w-[400px] w-auto"></Image>
+                <div className="py-6">
+                  <div className="w-full max-w-[400px] flex flex-col text-[19px]">
+                    <div className="w-full bg-[#F0D433] text-white text-center py-8 font-light ">Micro abierto - Guitarreada</div>
+                    <div className="w-full font-light grid grid-cols-2">
+                      <div className="col-span-1 px-2 bg-[#FE5554] py-4 h-full" >
+                        <p className="text-[19px]">Reencuentro <br />Murguero</p>
+                        <small>Estilo uruguayo</small>
+                      </div>
+                      <div className="col-span-1 bg-[#01CED7] h-full flex items-center px-2 py-4">
+                        <Link href="https://www.instagram.com/circodavinci?igsh=cmlvYWt2MXR5c3c4" className="flex gap-1 text-[17px]">
+                          <Insta></Insta>
+                          <div>
+                            <p>
+                              Circo Davinci <br />
+                              Música Balcánica
+                            </p>
+                          </div>
+                        </Link>
+                      </div>
+                    </div>
+                    <div className="w-full font-light grid grid-cols-10 text-white">
+                      <div className="col-span-4 px-2 bg-[#F0D433] py-4 h-full" >
+                        <Link href={"https://www.instagram.com/alejandro.suarez96?igsh=bWtqYnY4ZTkzaWFm"}>
+                          <div className="flex gap-1">
+                            <Insta></Insta>
+                            Ale Suarez
+                          </div>
+                          <p className="text-[16px]" style={{ lineHeight: 1 }}>Santiagueño <br /> de puras <br /> chacareras</p>
+                        </Link>
+                      </div>
+                      <div className="col-span-6 bg-[#DA719A] h-full flex items-center px-2 py-4">
+                        <Link href="https://www.instagram.com/ceci.sottile?igsh=MXRoZ2psNmlvdDQ3Zw==" className="flex flex-col items-center w-full justify-center text-[17px]">
+                          <div className="flex gap-1">
+                            <Insta></Insta>
+                            Ceci Sottile
+                          </div>
+                          <small>Canciones para el alma</small>
+                        </Link>
+                      </div>
+                    </div>
+                    <div className="w-full font-light grid grid-cols-10">
+                      <div className="col-span-3 px-2 bg-[#4E9BAF] py-8 h-full text-[15px]" >
+                        A confirmar
+                      </div>
+                      <div className="col-span-7 bg-[#FE5554] h-full flex items-center px-2 py-4">
+                        <Link href="https://www.instagram.com/martin_cabrera?igsh=MWQ3c3FzbHFsdHdmcw==" className="flex gap-1 text-[16px]">
+                          <Insta></Insta>
+                          <div>
+                            <p>
+                              Presenta Martin Cabrera
+                              <br />
+                              <span className="text-[14px]">
+                                Actor - Coplero - Murguero
+                              </span>
+                            </p>
+                          </div>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </ModalBody>
             </>
@@ -159,7 +218,7 @@ export default function Home() {
                       </defs>
                     </svg>
                   </div>
-                  <small className="text-center">Habrá una base pero para que no nos quedemos corto</small>
+                  <small className="text-center">Habrá una base, pero para que no nos quedemos corto</small>
                 </div>
 
                 <div className="flex flex-col gap-1 pt-4">
@@ -169,7 +228,7 @@ export default function Home() {
                   <div className="flex gap-2 justify-center items-center">
                     <input ref={inputRef} className="hidden" type="text" id="myInput" value="SANTI.CASTRO" />
                     <p className="text-[#C35285] text-center" style={{ lineHeight: 1 }}>ALIAS: SANTI.CASTRO</p>
-                    <svg  onClick={copyText} className="cursor-pointer" width="23" height="28" viewBox="0 0 23 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg onClick={copyText} className="cursor-pointer" width="23" height="28" viewBox="0 0 23 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g clip-path="url(#clip0_173_2)">
                         <path d="M22.6707 5.1275L17.945 0.333958C17.7261 0.111927 17.4597 0 17.1503 0H6.36821C5.37871 0 4.57324 0.817031 4.57324 1.82073V22.3289C4.57324 23.3282 5.38267 24.1496 6.36821 24.1496H21.2049C22.1941 24.1496 22.9999 23.3322 22.9999 22.3289V5.93396C22.9999 5.62005 22.8896 5.3499 22.6707 5.12786V5.1275ZM21.5011 22.3285C21.5011 22.4933 21.367 22.6293 21.2046 22.6293H6.36821C6.2018 22.6293 6.07169 22.4973 6.07169 22.3285V1.82073C6.07169 1.65594 6.20539 1.52031 6.36821 1.52031H16.9195V4.56568C16.9195 5.44833 17.629 6.16802 18.4992 6.16802H21.5015V22.3289L21.5011 22.3285Z" fill="#FE5554" />
                         <path d="M16.9282 26.1792C16.9282 26.3444 16.7949 26.48 16.6321 26.48H1.79497C1.63143 26.48 1.49845 26.3455 1.49845 26.1792V5.67144C1.49845 5.50628 1.63179 5.37065 1.79497 5.37065H2.79346C2.98395 5.37065 3.13814 5.21425 3.13814 5.02102V4.19998C3.13814 4.00675 2.98395 3.85034 2.79346 3.85034H1.79497C0.803676 3.85071 0 4.66591 0 5.67144V26.1792C0 27.1808 0.807629 28 1.79497 28H16.6317C17.619 28 18.4267 27.1808 18.4267 26.1792V25.8303C18.4267 25.6586 18.2894 25.5194 18.1201 25.5194H17.2348C17.0655 25.5194 16.9282 25.6586 16.9282 25.8303V26.1792Z" fill="#FE5554" />
